@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Recycle</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS for OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+</head>
+<body>
+    <header>
+        <h1>Cycle Recycle</h1>
+        <p>Your journey to responsible recycling starts here!</p>
+    </header>
+
+    <main>
+        <!-- QR Code Scanner -->
+        <section id="qr-scanner">
+            <h2>Scan QR Code</h2>
+            <div id="qr-reader" style="width: 300px; margin: auto;"></div>
+            <p id="qr-result">Scanned Result: <span id="result">None</span></p>
+        </section>
+
+        <!-- Recycling Locations -->
+        <section id="locations">
+            <h2>Recycling Locations</h2>
+            <div id="map"></div> <!-- Map container -->
+        </section>
+
+        <!-- Rewards -->
+        <section id="rewards">
+            <h2>Your Rewards</h2>
+            <p>Points Earned: <span id="points">0</span></p>
+            <p>Current Streak: <span id="streak">0</span> days</p>
+            <button onclick="redeemPoints()">Redeem Points</button>
+        </section>
+
+        <!-- Login / Signup -->
+        <section id="auth">
+            <h2>Login / Signup</h2>
+            <div id="login-form">
+                <input type="email" id="email" placeholder="Enter Email" required />
+                <input type="password" id="password" placeholder="Enter Password" required />
+                <button onclick="login()">Login</button>
+                <button onclick="signup()">Signup</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cycle Recycle. All rights reserved.</p>
+    </footer>
+
+    <!-- Leaflet JS for OpenStreetMap -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- QR Code Scanner Library -->
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./script.js"></script>
+</body>
+</html>
